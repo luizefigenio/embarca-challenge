@@ -22,6 +22,7 @@
 Step by step:
 
 Linux:
+Clone this repository and enter in your folder:
 
 ```
 sudo chown -R $USER:$USER
