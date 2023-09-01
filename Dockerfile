@@ -4,6 +4,7 @@ RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 WORKDIR /embarca-challenge
 COPY Gemfile /embarca-challenge/Gemfile
 COPY Gemfile.lock /embarca-challenge/Gemfile.lock
+RUN gem install pry
 RUN gem install rubocop
 RUN bundle install
 
