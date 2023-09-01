@@ -7,7 +7,7 @@ class CitiesController < ApplicationController
 
   def search
     @selected_state_id = params[:state]
-    @query = params[:query]
+    @name_city = params[:name_city]
     @filtered_cities = filter_cities
   end
 
@@ -19,7 +19,7 @@ class CitiesController < ApplicationController
 
   def filter_cities
     cities = City.where(state_id: @selected_state_id)
-    cities = cities.where('name ILIKE ?', "%#{@query}%") if @query.present?
+    cities = cities.where('name ILIKE ?', "%#{@name_city}%") if @name_city.present?
     cities
   end
 end
