@@ -1,0 +1,44 @@
+<div class="table-responsive custom-table-responsive">
+    <table class="table custom-table">
+        <thead>
+            <tr>  
+            <th scope="col">
+                <label class="control control--checkbox">
+                <input type="checkbox"  class="js-check-all"/>
+                <div class="control__indicator"></div>
+                </label>
+            </th>
+            
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Population</th>
+            <th scope="col">States</th>
+            <th scope="col">Governor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if @filtered_cities %>
+                <% @filtered_cities.each do |city| %>
+                    <tr scope="row">
+                        <td>
+                        <label class="control control--checkbox">
+                            <input type="checkbox"/>
+                            <div class="control__indicator"></div>
+                        </label>
+                        </td>
+                        <td>
+                        <%= city.id %>
+                        </td>
+                        <td><a href="#"><%= city.name %></a></td>
+                        <td>
+                        <%= city.population %> 
+                        </td>
+                        <td><%= city.state.name %></td>
+                        <td><%= city.state.governor %></td>
+                    </tr>
+                <% end %>
+                <tr class="spacer"><td colspan="100"></td></tr>
+            <% end%>
+        </tbody>
+    </table>
+</div>

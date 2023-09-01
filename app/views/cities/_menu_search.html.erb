@@ -1,0 +1,12 @@
+<form class="form-wrapper cf" method="get"  action="/cities" >
+    <label>Choose a State:</label>
+
+    <select name="state">
+    <% @states.each do |state| %>
+        <option value="<%= state.id %>"><%= state.name.upcase %></option>
+    <% end %>
+    </select>
+
+    <input type="text" class="search-box" name="name_city" placeholder="Search For a City..">
+    <button type="submit" >Search</button>
+</form>
