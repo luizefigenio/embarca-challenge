@@ -1,7 +1,33 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+State.destroy_all
+
+# Criar registros dos estados
+State.create(name: 'Paraná', abbreviation: 'PR', population: 11_516_840, governor: 'Carlos Massa Ratinho Junior')
+State.create(name: 'Santa Catarina', abbreviation: 'SC', population: 7_252_502, governor: 'Carlos Moisés da Silva')
+State.create(name: 'Rio Grande do Sul', abbreviation: 'RS', population: 11_422_973, governor: 'Eduardo Leite')
+
+City.destroy_all
+
+cities_data = {
+  'Paraná' => [
+    { name: 'Curitiba', population: 1_948_626 },
+    { name: 'Londrina', population: 575_377 },
+    { name: 'Maringá', population: 421_547 }
+  ],
+  'Santa Catarina' => [
+    { name: 'Florianópolis', population: 500_973 },
+    { name: 'Joinville', population: 590_466 },
+    { name: 'Blumenau', population: 361_855 }
+  ],
+  'Rio Grande do Sul' => [
+    { name: 'Porto Alegre', population: 1_484_941 },
+    { name: 'Caxias do Sul', population: 518_012 },
+    { name: 'Pelotas', population: 343_199 }
+  ]
+}
+
+cities_data.each do |state_name, cities|
+  state = State.find_by(name: state_name)
+  cities.each do |city_data|
+    state.cities.create(city_data)
+  end
+end
