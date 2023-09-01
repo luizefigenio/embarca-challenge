@@ -1,11 +1,9 @@
-State.destroy_all
+# State.destroy_all
+# City.destroy_all
 
-# Criar registros dos estados
-State.create(name: 'Paraná', abbreviation: 'PR', population: 11_516_840, governor: 'Carlos Massa Ratinho Junior')
-State.create(name: 'Santa Catarina', abbreviation: 'SC', population: 7_252_502, governor: 'Carlos Moisés da Silva')
+State.create(name: 'Parana', abbreviation: 'PR', population: 11_516_840, governor: 'Carlos Massa Ratinho Junior')
+State.create(name: 'Santa Catarina', abbreviation: 'SC', population: 7_252_502, governor: 'Carlos Moises da Silva')
 State.create(name: 'Rio Grande do Sul', abbreviation: 'RS', population: 11_422_973, governor: 'Eduardo Leite')
-
-City.destroy_all
 
 cities_data = {
   'Paraná' => [
