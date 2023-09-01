@@ -40,4 +40,4 @@ You just type in the name of the city you're curious about and choose the state 
 
 Practical example:
 
-![using a color picker](./to_readme/exemple.gif)
+![using a color picker](to_readme/exemple.gif)
