@@ -25,13 +25,13 @@ Linux:
 Clone this repository and enter in your folder:
 
 ```
-sudo chown -R $USER:$USER
+sudo chown -R $USER:$USER .
 ```
 
 Docker and docker compose must be installed:
 
 ```
-docker compose up
+docker compose build && docker compose up
 ```
 
 ## ☕ Using the Embarca Challenge
