@@ -1,24 +1,42 @@
-# README
+# Embarca Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Scenarios
 
-Things you may want to cover:
+- [x] A rails app, built from scratch that should contain:
+- [x] A table with these states from Brazil: Paraná, Santa Catarina, and the Rio Grande
+      do Sul
+- [x] A table with some cities from Parana, Santa Catarina, and the Rio Grande do Sul
+      (at least 3 of each state)
+- [x] A route to retrieve all cities based on some received params: State, Part of the name
+- [x] A frontend to display all cities that match with the search.
+- [x] A test suite for this scenario
 
-* Ruby version
+## 💻 Requirements
 
-* System dependencies
+- [x] This app should be written with ruby version 2.7.0 and Rails version 5.x
+- [x] This app should run in a docker container with docker-compose
+- [x] Rubocop to make sure your code follows the standards
 
-* Configuration
+## 🚀 Installing the Embarca Challenge
 
-* Database creation
+Step by step:
 
-* Database initialization
+Linux:
 
-* How to run the test suite
+```
+sudo chown -R $USER:$USER
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Docker and docker compose must be installed:
 
-* Deployment instructions
+```
+docker compose up
+```
 
-* ...
+## ☕ Using the Embarca Challenge
+
+You just type in the name of the city you're curious about and choose the state you want to explore. It's like a map that instantly shows you all places in that area
+
+Practical example:
+
+![using a color picker](./to_readme/exemple.gif)
